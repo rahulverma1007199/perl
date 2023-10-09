@@ -1,0 +1,7 @@
+Perl is one of the top choices of text processing, system administration and even web development.
+
+to run perl through command line interface. "perl -e 'print "hello\n"'" -- you can also use double quote but it is used to interpolate variables.
+
+you can also run with -E - it enables some of the core features --like using "say" -- this automatically add a new line of whatever we are printing
+"perl -E 'say "hello"'"
+"perl -E 'while(<>) {say uc $_}' " -- some use cases of this is -- listing files, parsing file names, replacing file extensions.

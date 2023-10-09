@@ -1,0 +1,15 @@
+scalars are single unit of data -- meaing they can hold of one of undefined number, decimal number, string or reference.
+To define use $ sign.
+we can't redefine a varibale and they are case sensitive 
+to concatinate use -- . (dot); to use special char like \n or \t use them in ""
+
+DEBUGING
+use Data::Dumper; -- you don;t use to install this seprately unless you are not using pro version 5.36 or above.
+so when we use above we get a power debugging method  called dumper.
+print Dumber(); //anything that put in the bracks will debug in terminal
+like 
+my $a = 'hello';
+my $b = 22.32;
+print Dumper($a , $b);
+
+run the script.

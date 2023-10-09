@@ -1,0 +1,10 @@
+create a <anyname>.pl file and write to execute it -- perl <filename>.pl
+#!/usr/bin/env perl -- this is known as shebang line -- it tells the system to how to run this file if the file is set as executable -- to run it as executable in console -- ./<name>.pl
+if the file is not executable then change chmod writes.
+the lines start with use called pragmas -- the statement enforce you to write robust and less error prone code.
+use strict;
+use warnings;
+
+print "hello world";
+1; -- it return -- its common to return a turthy value in the end of your compilcations. but it is not complusory.
+
