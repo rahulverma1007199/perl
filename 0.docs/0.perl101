@@ -1,0 +1,17 @@
+Perl  - A dynamic interpreterd scripting language famous for its powerful text processing abilites. 
+Most commonly used to write CGI scripts - That allow web servers to communicate with external programs -- its powerful string parsing abilites has made it the language of choise on high traffic sites like DuckDuckGo, Booking.com, abd craigslist
+Syntactically it resembles C but is far more compress allowing developers to write very tourist code, like one liner that hack together a solution much quicker than other scripting lnaguage like python.
+It contains a large collection of language primitives and a ton of shortcuts for getting things done quickly.
+You may find it ugly and awkward but system administrators love it beacuse it gets the job done.
+
+Installation
+Install perl interpreter then create a file with .pl extension 
+
+One of the design prinicple of perl is that the "things that are different should look different"
+
+Our function defines as subroutines
+
+Perl has some good magic features like
+Autovivification
+
+to run code open interpreter.
