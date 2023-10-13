@@ -1,4 +1,4 @@
-Perl is one of the top choices of text processing, system administration and even web development.
+Perl is one of the top choices for text processing, system administration and even web development.
 
 to run perl through command line interface. "perl -e 'print "hello\n"'" -- you can also use double quote but it is used to interpolate variables.
 

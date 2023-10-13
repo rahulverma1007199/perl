@@ -13,4 +13,23 @@ my $b = 22.32;
 print Dumper($a , $b);
 
 run the script.
-this is not that big deal for simpler datatype like string or int but for array reference they are a big deal.
+this is not that big deal for simpler datatype like string or int but for array, reference they are a big deal.
+
+
+#arrays
+Array is a data type that holds order list of values and these values can be strings,numbers, decimals and references.
+Note -- list and array often refers as they are same but list is the data you assign to array and array is the actual variable.
+
+to create
+my @test = ();
+
+qw -- vault board 
+
+my @test = (11,'test','121',0.122);  //print this in variable in dumper
+my @test = qw/one two three four haha seven/; // this is handy for single word string
+
+to access a value = $test[0];
+to override = $test[2] = 'anythin'; // you can do like $test[10] = 'haha'; and in between values will be undefined
+to access last valye = $test[-1]; // -2 for second last and so on.
+
+my $size = @test; // here we are assign a list to scaler but scaler can't hold a list it holds single value -- try debugging it
