@@ -1,0 +1,60 @@
+subroutine is extacly like functions i.e a group of statement to do the specific task
+
+typically each subroutines are written to perform a specific task.
+
+sub test{
+    print "Hello\n";
+}
+
+test();
+
+all the arguments held inside @_ or $_[0] in subroutine.
+
+sub test{
+    my $name = $_[0]; 
+    print "Hello, $name! \n";
+}
+
+OR
+
+sub test{
+    my @args = @_;
+    my $name = $args[0]; 
+    print "Hello, $name! \n";
+}
+
+
+test('rahul');
+
+subroutines return the last statemnt and if you want to return void then use -- return undef;
+
+to use signatures
+use feature qw/ signatures /;
+
+sub test($name = undef ){
+    print "Hello, $name! \n";
+}
+
+
+test('rahul');
+
+-- put required argument before the optional argument
+
+sub test($last_name,$name = undef ){
+    print "Hello, $name! \n";
+}
+
+
+test('rahul');
+
+-- there is another option to define optional variable 
+
+sub test($name,@inputs){
+    print Dumper $name;
+    print Dumper \@inputs;
+}
+
+
+test('rahul',1,2,3,4,5,[qw/ a b c/]);
+
+to access items in args best option is to use shift

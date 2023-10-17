@@ -1,0 +1,5 @@
+my is local scope
+our is global scope
+state is found in feature -- use feature qw/ state /;
+
+to import another script use -- required './scirpt2.pl';

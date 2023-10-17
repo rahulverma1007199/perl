@@ -1,0 +1,15 @@
+die; -- after this script breaks and nothing will be executed.
+
+die 'cannot go on';
+
+die is used to throw exception 
+eval is used to handle error
+
+eval{
+    die;
+};
+
+and the value of this is stored in $@;
+
+another is warn
+warn "something is not write"; - it just notify but not break script

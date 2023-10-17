@@ -33,3 +33,126 @@ to override = $test[2] = 'anythin'; // you can do like $test[10] = 'haha'; and i
 to access last valye = $test[-1]; // -2 for second last and so on.
 
 my $size = @test; // here we are assign a list to scaler but scaler can't hold a list it holds single value -- try debugging it
+
+to populate array with numbers like from 11 to 30
+- one way - my @test = (11,12,13,any so on);
+- another  way - my @test = (11 .. 30);
+- another way with letters - my @test = ('a' .. 'z');
+
+to access elements in an array with a range - @test[2 ..5];
+
+4 common methods - push, pop, shift and unshift
+
+#push 
+push @test,20;
+
+#pop
+pop @test;
+
+#shift
+shift @test;
+
+#unshift
+unshift @test ,20;
+
+#sort
+@test = sort @test; // sort by default sort letter
+@test = sort @test; // if test is numberic list then if will not sort as it sorts the number based on string context
+@test = sort {$a <=> $b} @test;  // this will work for numberic list
+@test = sort {$b <=> $a} @test; // this sort in desending order
+
+#DATATYPE - Hashes
+hash is simply a key value pair, we sort and access our values on hash through keys. 
+Value in hash can be string, number or references
+It's fastest way to look up for value if you know the key.
+
+my %map = (); // this is how we define
+
+my %map = (
+    a => 20,
+    b => 'hello',
+    c => 20.12,
+    d => asd213ead,
+);
+
+if you print it - print Dumper (%map) - you will see every time the order changes as hash doesn't preserver the order.
+
+to access a value with key -- print Dumper ($map{c})
+
+to set a new value -- $map{d} = 'new';
+
+to merger two hashes - my %map2 = (hello => 1, %map);
+
+to access a range - @map{'a','c'}
+
+my @array  = keys %map;
+my $size = keys %map;
+
+my $exits = exists $map{d} ? 'yes' :'no'; --exists check the truthy value of key 
+my $exits = $map{d} ? 'yes' :'no'; -- this also say do the same but it just checks the key ingeneral
+
+to delete from hash
+delete $map{c};
+
+
+REFERENCES 
+These are location in memeory which points to another data strucutre such as array, hash or scaler.
+It allows us to create nested data strucutre like hashes contains arrays references.
+
+to get reference use -- \;
+like \%map;
+
+to print directly without using Dumper 
+print %map ."\n";
+
+when we want to manipulate a reference then we first need to dereference them.
+
+my @array = qw/ string1 string2/;
+
+my $ref = \@array;
+
+push $ref->@*, 'new';
+
+to create reference with <anyname>_ref
+my $hash_ref = {a => 1 , b => 2};
+
+print Dumper ($hash_ref->{a});
+
+to dereference whole -- $hash_ref->%*; for array @*
+another way  - %$hash_ref
+or %{$hash_ref}
+
+-- to deply nested in hash with reference
+my $hash_ref = {
+    a => 1,
+    b => 2,
+    c => {
+        new => 1,
+        new1 => 2,
+        new2 => 3,
+        new3 => [1,2,3,4,5];
+    },
+};
+
+print Dumper($hash_ref->{c}->{new3}->[3]);
+
+for array
+my $array_ref = [
+    1,
+    [qw/a b c/],
+    {
+        a => 1,
+        b => 2,
+        c => [
+            1 ,2 3
+        ]
+    },
+];
+
+print Dumper($hash_ref->[2]->{c}=>[2]);
+
+to change if you are working with ref or not using ref function
+print Dumper(ref ($hash_ref));
+
+to use keys function with hash ref 
+print Dumper( keys $hash_ref->%*);

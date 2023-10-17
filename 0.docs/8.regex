@@ -1,0 +1,14 @@
+regular expression are patterns that you want to match against a string.
+
+eg:
+
+my $test = 'sadaadadsddog';
+if($test =~ /dog/){
+    say "match";
+}else{
+    say "does not match";
+}
+
+to use backslash in regex use forward slash  -- /dog\//
+
+to find something begining at the string using ^ - m{^dog/$} -- 2:19:30;

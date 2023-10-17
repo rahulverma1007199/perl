@@ -1,0 +1,45 @@
+while(){
+
+}
+
+for(my $test = 0 ; $test < 10 ; $test ++){
+
+}
+
+foreach my $item (@list){
+
+}
+
+in perl foreach item we change the original list;
+
+next keyword to use;
+next if $item == 2;
+
+last if $item == 2;
+
+redo if $item == 2;
+
+goto LOOP2 if $item == 1;
+
+eg:
+
+LOOP1:foreach my $item (@list){
+    
+    goto LOOP2 if $item == 1;
+
+    LOOP2:foreach my $each_item (@item){
+    
+}
+}
+
+complext eg:
+
+LOOP1:foreach my $item (@list){
+    
+
+    LOOP2:foreach my $each_item (@item){
+        
+    last LOOP1 if $item == 1;
+    
+}
+}

@@ -1,0 +1,42 @@
+terniry operator
+
+say feature adds a new line in the end -- use feature qw/ say /;
+say 'something';
+
+<=> -- its 3 way comparision
+
+to check string
+'a' eq 'b' 
+eq - equal
+ne - not equal
+lt - less  than in alphabetical order
+gt 
+le less than
+ge 
+
+my $str = 'h' x 6 ; x is only used for string;
+
+my $str = 'hello';
+$str .= 'world'; OR $str = $str . ' world';
+
+if(){
+
+}
+elsif(){
+
+}
+else{
+
+}
+
+unless( ){
+
+}elsif(){
+
+}else{
+
+}
+
+my $test = 2;
+$test = 5 unless 3 > 2;
+$test = 5 if 3 > 2;
