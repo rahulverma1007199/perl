@@ -1,0 +1,75 @@
+map function
+my @new_list = map{
+    uc $_
+} @list;
+
+OR
+my @new_list = map{
+    $item  = uc $_;
+    $item  .= '_new';
+    $item;
+} @list;
+
+GREP
+my @new_list = map{
+    $_ eq = 'cat' || $_ eq 'dog'; 
+} @list;
+
+SPLIT
+my @parts = split m/e/, 'test_test';
+
+JOIN 
+my @parts = qw/ a b c d e f/;
+my $full_string = join '_', @parts;
+
+uc or lc for upper and lower case  or ucfirst  or length
+my $test = 'Cat';
+$test = uc $test; 
+
+Random 
+rand(10) 
+int(rand(10)) -- int gives the floor value
+
+sleep -- stop the executaion for give second
+
+sleep 2;
+
+substring
+substr ('cat',0,1); 0 means start after than index and 1 means total number of index ;
+
+time -- gives time
+say (time);
+
+SPECIAL VARIABLE
+
+@ARGV 
+like say Dumper \@ARGV - why we use \ so we fetch the reference and it's visual pleasing for print 
+
+now run script --- perl script.pl 
+also try running -- perl script.pl 1 2 1 12 a bc dog
+
+to acces first value -- $ARGV[0];
+
+$$  gives process id;
+like say Dumper $$
+
+to check it -- ps aux | grep script.pl -- give the process ID 
+
+$| -- it gives perl version
+like say Dumper $|
+
+@INC -- give path to modules
+like say Dumper \@INC
+
+%ENV -- give env virables
+like say Dumper \%ENV 
+
+while(<STDIN>){
+    say $_
+}
+
+if you run the script and type anything - it just say it
+
+__FILE__ -- name of our script file 
+__LINE__ 
+__PACKAGE__ -- use them with say to get the context 

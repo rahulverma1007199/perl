@@ -1,0 +1,28 @@
+two type of perl extension pl and pm where pm stands for pro module
+
+create a dog.pm file
+we don't execute pm files directly
+
+package Dog;
+
+use strict;
+use warnings;
+
+sub new {
+    my ($class, $breed, $height, $weight, $color, $name) = @_;
+
+    my $self = {
+        breed => $breed,
+        height => $height,
+        weight => $weight,
+        color => $color,
+        name => $name,
+    };
+
+    bless $self, $class;
+
+    return $self;
+}
+// 2:52:30
+1; // this is required in pm
+

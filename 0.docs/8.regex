@@ -3,12 +3,61 @@ regular expression are patterns that you want to match against a string.
 eg:
 
 my $test = 'sadaadadsddog';
-if($test =~ /dog/){
+if($test =~ /dog/){ //this search for dog
     say "match";
 }else{
     say "does not match";
 }
 
-to use backslash in regex use forward slash  -- /dog\//
+to use backslash in regex use forward slash  -- /dog\// -- this search for dog/ pattern like - catdog/mouse
 
-to find something begining at the string using ^ - m{^dog/$} -- 2:19:30;
+m{dog/} - m stand for modifier and it change the syntax of wraping and enable the use of curley brackets 
+
+if you use ^ - it matches only in the begining and if uses $ then in the end only, to use both -- m{^dog/$}
+
+to find a word character use - w with forward slash like \w
+m{^dog\w$} -- it means search for dog and followed by any characters - to match something other than character use capial W.
+\d - is used for number but the above matches for one charcter to use them for more than one use + -- \d+
+and if you are confuses like there can we more letter or not then use star - \w*
+
+to get specific length - m{^dog\d{2}$} -- it saerch for dog followed by 2 number and to give range -- use {2,4}
+
+\s -- consider spaces  and \S not space
+
+to search for non-case senstive - m{dog}i
+
+to caputer the patter we are looking for  -- m{cat(\d+)}i  -- use () and pattern will be capute against $1, $2 and so on
+
+like 
+my $test = 'cat11231    ';
+
+if($test =~ m{cat(\d+)(\s)}i ){
+    say "matches! $1 $2";
+}else{
+    say "does not match";
+}
+
+and eg
+
+my @list = qw/ cat dog rat /;
+
+foreach my $item (@list){
+    $item =~ m/^(\w{2})/;
+    say $1;
+}
+
+REPLACEMENT -- use S
+
+my @list = qw/ cat dog rat /;
+
+foreach my $item (@list){
+    $item =~ s/\w{2}/Replaced/;
+    say $item;
+}
+
+my @list = qw/ cat dog rat /;
+
+foreach my $item (@list){
+    my @caputres = $item =~ m/(\w)(\w)/;
+    say Dumper \@captures; 
+}
