@@ -1,0 +1,43 @@
+new file .pm
+
+package OurModule;
+
+use strict and warming here;
+use Exporter qw/ import /;
+
+our @EXPORT = qw / add_methods_you_want_to_export /;
+create a subroutine make sure to return
+
+1;
+
+in .pl
+use OurModule;
+
+call functions ();
+
+
+// if in .pl if you use OurModule qw//; this import nothing
+and you have to use
+OurModule::functionNmae(); and this is called static they don;t have class at first argument
+for that use 
+OurModule->functionName() // this is class method 
+
+and if you function name has -- my ($num1 , $num2) = @_;
+then add my ($class, $num1 , $num2) = @_;
+
+if you use @EXPORT_OK -- then we need to explicitly call the method qw/ method_name / in .pl use
+
+// installing module with CPANM
+defualt package manage of perl us CPAN but it's very tidious to setup
+
+in terminal -- prelbrew install-cpanm
+to check it's install -- which cpanm
+to get all the commands -- cpanm --help
+
+to get all the packages search -- metacpanm 
+for there copy the name
+
+cpanm JSON::XS
+
+use JSON::XS
+3:36:28

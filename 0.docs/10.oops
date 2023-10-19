@@ -23,6 +23,58 @@ sub new {
 
     return $self;
 }
-// 2:52:30
+
 1; // this is required in pm
 
+no go to .pl file
+// when we call use it is the first thing to run but we can overwrite this by using BEGIN 
+
+BEGIN {
+    push @INC, '<absolute path to the folder>'
+}
+OR if you want to avoid writing begin -- in terminal perl -I ./ script.pl
+use Dog; 
+
+my $dog = Dog->new('lasd',50,70,'color','abc');
+
+in .pm
+sub breed { //getter method
+    my $self = shift;
+    return $self->{breed};
+}
+
+sub height { //getter method
+    my $self = shift;
+    return $self->{height};
+}
+
+
+say $Dog->breed;
+
+
+for setter
+sub set_height { //getter method
+    my ($self, $height) = @_;
+    $self->{height} = $height;
+}
+
+in .pl
+$Dog->set_height(120);
+
+// for methods in .pm
+sub get_height_and_weight {
+    my $self = shift;
+    
+    return $self->{height} + $self->{weight};
+}
+
+in .pl
+say $Dog->get_height_and_weight;
+
+//DESTROY is used to clean up
+sub DESTROY{
+    print "bye everyone \n";
+}
+
+
+//you can create multiple instances of class

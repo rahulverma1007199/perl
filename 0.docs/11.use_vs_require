@@ -1,0 +1,18 @@
+require in run time
+use in compile time
+
+require 'Data/Dumper.pm';
+for conditional use require
+but for mandate use use.
+
+use Data::Dumper -- 'Data/Dumper.pm' at backend like @INC _BASE_ . 'Data/Dumper.pm';
+
+to import only specific method 
+
+BEGIN {
+    Data::Dumper->import();
+}
+
+or 
+use Data::Dumper qw / Dumper / -- leave blank if you don;t want to import any thing qw//;
+or say Data::Dumper::Dumper("test");
