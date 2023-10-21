@@ -1,0 +1,23 @@
+Go to MetaCpan
+search -- Try::Tiny::SmartCatch another is Exception::Class
+
+use both 
+
+try sub{
+
+},
+catch_default sub{
+    say "$_";
+};
+
+to throw Exception -- use Exception::Class('MyException');
+
+in try block -- MyException->throw(error => 'something in not right');
+
+you can also add catch_when block between try and catch_default ;
+
+like - catch_when 'MyException' => sub {
+    say 'I know'; or you can add $_ -- this print the error
+}
+
+why to use -- beacuse die combine with eval is not a good way for larger projects

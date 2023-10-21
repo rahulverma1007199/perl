@@ -1,0 +1,61 @@
+
+to write a file use -- open function
+
+open (variable, symbol which say you want to read or write or append a file,  'calling the file');
+open (my $FH , '>' , './text.txt');
+print $FH "hello world";
+close($FH);
+
+- make sure to close the file as this will avoid memory leaks
+
+
+> -- this will overwrite the file
+>> -- this will not overwrite
+< -- to read 
+
+open (my $FH , '<' , './text.txt');
+
+my $content = do {
+    local $/; <$FH>;
+}
+
+close($FH);
+
+say $content;
+
+FOR LARGER FILE USE WHILE BLOCK 
+
+open (my $FH , '<' , './text.txt');
+
+my $content = "" ;
+
+while(defined (my $line = <$FH>)) {
+    $content .= $line;
+}
+
+close($FH);
+
+say $content;
+
+READING AND WRITING with Path::Tiny
+
+use Path::Tiny
+my $Path = path(path);
+
+$Path->spew('a','b'); to add new line "a\n" - this will write 
+to read - my $content = $Path->slurp;
+or
+my @content = $Path->lines;
+
+Read documentaion for more;
+
+SOME SYSTEM COMMANDS
+
+to invoke sysmtem commands  use ``;
+like  my $ouput = `ls ./`;
+
+or `touch ./$_.txt` for (1 .. 10);
+
+you can do with system function --  $contet = system('ls','./'); -- this will run but some store the output
+
+to quit after execution  -- exec('ls','./');  -- after exec the code quit

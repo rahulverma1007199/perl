@@ -1,0 +1,13 @@
+Web Requests with Mojo::UserAgent
+
+why we use this module if there are plenty other beacuse it's user-friendly and feature rich
+
+Download the above module from -- MetaCpan
+
+for sample api go to - jsonplaceholder.typicode.com
+
+set the document for more
+
+for requesting ssl you might need to install -- IO::Socket::SSL
+
+Make sure to practice async call with promises.

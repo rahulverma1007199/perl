@@ -40,4 +40,5 @@ for there copy the name
 cpanm JSON::XS
 
 use JSON::XS
-3:36:28
+
+another common used module -- ExtUtils::Installed
