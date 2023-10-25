@@ -113,7 +113,7 @@ my $ref = \@array;
 
 push $ref->@*, 'new';
 
-to create reference with <anyname>_ref
+to create reference with <anyname>_ref so that we won't confuse though this is no mandatory
 my $hash_ref = {a => 1 , b => 2};
 
 print Dumper ($hash_ref->{a});
