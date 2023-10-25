@@ -33,6 +33,13 @@ CPNAM stand CPAN Minus
 
 in terminal -- perlbrew install-cpanm
 to check it's install -- which cpanm
+
+if you have successfully install cpanm but which cpanm say -- cpanm not found then you need to add your path
+
+for mac
+export PATH=/Users/kamal/perl5/perlbrew/bin:$PATH -- this will be change for you
+source ~/.bash_profile
+
 to get all the commands -- cpanm --help
 
 to get all the packages search -- metacpanm 
