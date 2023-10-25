@@ -29,8 +29,9 @@ if you use @EXPORT_OK -- then we need to explicitly call the method qw/ method_n
 
 // installing module with CPANM
 defualt package manage of perl us CPAN but it's very tidious to setup
+CPNAM stand CPAN Minus
 
-in terminal -- prelbrew install-cpanm
+in terminal -- perlbrew install-cpanm
 to check it's install -- which cpanm
 to get all the commands -- cpanm --help
 
