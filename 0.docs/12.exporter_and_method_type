@@ -40,6 +40,8 @@ for mac
 export PATH=/Users/kamal/perl5/perlbrew/bin:$PATH -- this will be change for you
 source ~/.bash_profile
 
+if in the next terminal it's not working then echo $PATH as check if you other tab added path in there if not then add manually in -- sudo nano /etc/paths
+
 to get all the commands -- cpanm --help
 
 to get all the packages search -- metacpanm 
