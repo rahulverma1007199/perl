@@ -1,0 +1,38 @@
+How to Do Web Scraping in Perl
+
+Performing web scraping using Perl involves the steps below:
+
+    Get the HTML document associated with the target page with the HTTP client HTTP::Tiny.
+    Parse the HTML content with the HTML parser HTML::TreeBuilder.
+    Export the scraped data to a CSV file with Text::CSV.
+
+To perform Perl web scraping, you'll need two cpan libraries:
+
+    HTTP::Tiny: A lightweight, simple, and fast HTTP/1.1 client. It supports proxies and custom headers.
+    HTML::TreeBuilder: A parser that exposes an easy-to-use API to turn HTML content into a tree and explore it.
+
+First Explore the HTML code, and you'll note that each product element is <li> with a product class. Retrieve them all. The look_down() method will select all nodes whose HTML tag is li and that have the product class.
+
+qr() is a Perl function to turn a string into a regular expression. Without the cast, look_down() would search for elements whose class attribute is equal to the string passed as a parameter.
+
+Given a product HTML element, the useful data to extract is:
+
+    The product URL in the <a>.
+    The product image in the <img>.
+    The product name in the <h2>.
+    The product price in <span>.
+
+In Perl, a class is a package. Use Moo to make it easier to define a data class.
+
+To make all Page web scrapper 
+These are the steps to implement web crawling:
+
+    Visit a page.
+    Get the pagination link elements.
+    Add the newly discovered URLs to a queue.
+    Repeat the cycle with a new page.
+
+Start by inspecting a pagination number HTML element with the DevTools:
+
+Rendering JS: Headless Browser Scraping in Perl
+Selenium-Remote-Driver is the Perl binding of Selenium, one of the most popular headless browsers.
