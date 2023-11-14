@@ -1,6 +1,6 @@
 new file .pm
 
-package OurModule;
+package OurModule; // this should match in file name
 
 use strict and warming here;
 use Exporter qw/ import /;
